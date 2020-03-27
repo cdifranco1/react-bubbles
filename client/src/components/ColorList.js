@@ -45,6 +45,7 @@ const ColorList = ({ colors, updateColors }) => {
       .then(res => {
         const updatedColorList = colors.filter(el => el.id !== res.data)
         updateColors(updatedColorList)
+        setEditing(false)
       })
       .catch(err => console.log(err))
   };

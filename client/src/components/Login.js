@@ -22,8 +22,8 @@ const Login = () => {
       .post(`http://localhost:5000/api/login`, user)
       .then(res => {
         localStorage.setItem('token', res.data.payload)
+        history.push('/bubbles')
       })
-    history.push('/bubbles')
   }
 
   const handleChange = (e) => {
